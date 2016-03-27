@@ -1,0 +1,4 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+    <string name="app_name">My Calculator</string>
+    <string name="action_exit">Exit</string>
+</resources>

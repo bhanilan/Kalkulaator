@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#FFE3E4E4">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/editText"
+        app:layout_heightPercent="14%"
+        app:layout_widthPercent="100%"
+        android:textSize="@dimen/font_size"
+        android:background="@drawable/textbox"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentRight="true"
+        android:text="Clear"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/buttonDel"
+        android:onClick="doDelete"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="100%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonDel"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:text="÷"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/buttonDiv"
+        android:onClick="selectOperation"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/buttonDiv"
+        android:layout_below="@+id/buttonDel"
+        android:layout_weight="1"
+        android:text="7"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button7"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button7"
+        android:layout_below="@+id/buttonDel"
+        android:text="8"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button8"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button8"
+        android:layout_below="@+id/buttonDel"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="1"
+        android:text="9"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button9"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonDiv"
+        android:layout_alignParentRight="true"
+        android:id="@+id/buttonMulti"
+        android:text="×"
+        android:textSize="@dimen/font_size"
+        android:onClick="selectOperation"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/buttonMulti"
+        android:layout_below="@+id/button7"
+        android:text="4"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button4"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button4"
+        android:layout_below="@+id/button8"
+        android:text="5"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button5"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button5"
+        android:layout_below="@+id/button9"
+        android:layout_alignParentLeft="true"
+        android:text="6"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button6"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonMulti"
+        android:layout_alignParentRight="true"
+        android:text="-"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/buttonSub"
+        android:onClick="selectOperation"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/buttonSub"
+        android:layout_below="@+id/button4"
+        android:text="3"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button3"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_below="@+id/button5"
+        android:text="2"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button2"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button2"
+        android:layout_below="@+id/button6"
+        android:layout_alignParentLeft="true"
+        android:text="1"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button1"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSub"
+        android:layout_alignParentRight="true"
+        android:text="+"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/buttonAdd"
+        android:onClick="selectOperation"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/buttonAdd"
+        android:layout_below="@+id/button3"
+        android:text="="
+        android:textSize="@dimen/font_size"
+        android:id="@+id/buttonCalc"
+        android:onClick="doCalculation"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/buttonCalc"
+        android:layout_below="@+id/button2"
+        android:text="."
+        android:textSize="@dimen/font_size"
+        android:id="@+id/buttonCom"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button"
+        android:onClick="onClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/buttonCom"
+        android:layout_below="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:text="0"
+        android:textSize="@dimen/font_size"
+        android:id="@+id/button0"
+        android:onClick="onClick"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="24%"
+        android:background="@drawable/my_button" />
+
+</android.support.percent.PercentRelativeLayout>
