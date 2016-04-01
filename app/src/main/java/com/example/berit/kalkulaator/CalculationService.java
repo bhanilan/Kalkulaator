@@ -24,7 +24,7 @@ public class CalculationService extends Service {
         return mBinder;
     }
 
-    //Arvutamise tehte valik
+    //Calculation based on selected operation
     public String calculate(double n1, double n2, String op) {
         double calc = 0;
 

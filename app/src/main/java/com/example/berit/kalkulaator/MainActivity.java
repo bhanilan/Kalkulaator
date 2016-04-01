@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         float fontSize = res.getDimension(R.dimen.font_size);
     }
 
-    //Arvu salvestamine muutujasse ja kuvamine ekraanil.
+    //Saving and displaying first and second number
     public void onClick(View view){
         Button button = (Button) view;
         String str = button.getText().toString();
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         editText.setText(display);
     }
 
-    //Numbritega teostatava operatsiooni valik
+    //Saving operation sign
     public void selectOperation(View view){
         if (!no1.isEmpty() && !no2.isEmpty()) {
             Button button = (Button) view;
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         editText.setText(no1);
     }
 
-    //Arvutamise teenuse välja kutsumine
+    //Use Calculation service
     public void doCalculation(View view){
         if (no1.isEmpty() || no2.isEmpty()) {
             return;
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         op = "";
     }
 
-    //Tehte kustutamine mälust
+    //Delete previous
     public void doDelete(View view){
         EditText editText = (EditText) findViewById(R.id.editText);
         display = "";
@@ -99,6 +99,27 @@ public class MainActivity extends AppCompatActivity {
         op = "";
         no2 = "";
         editText.setText(display);
+    }
+
+    //Input validation
+    public String validation(String str) {
+        //if first input is coma
+        if (display.isEmpty() && ".".equals(str)) {
+            str = "0.";
+        }
+        //if second number starts with coma
+        if (!display.isEmpty() && !op.isEmpty() && no2.isEmpty() && ".".equals(str)) {
+            str = "0.";
+        }
+        //if number starts with 0 coma should be clicked
+        if (no1.equals("0") && !".".equals(str)) {
+            str = "";
+        }
+        //number can't contain more than one coma
+        if (display.contains(".") && ".".equals(str)) {
+            str = "";
+        }
+        return str;
     }
 
     @Override
@@ -177,21 +198,4 @@ public class MainActivity extends AppCompatActivity {
             mBound = false;
         }
     };
-
-    //Valideerimine
-    public String validation(String str) {
-        if (display.isEmpty() && ".".equals(str)) {
-            str = "0.";
-        }
-        if (!display.isEmpty() && !op.isEmpty() && no2.isEmpty() && ".".equals(str)) {
-            str = "0.";
-        }
-        if (no1.equals("0") && !".".equals(str)) {
-            str = "";
-        }
-        if (display.contains(".") && ".".equals(str)) {
-            str = "";
-        }
-        return str;
-    }
 }
